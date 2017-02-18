@@ -6,11 +6,11 @@ let co = require('co');
 var each = require('co-each');
 let pageUrls = [
     'http://sc.chinaz.com/yinxiao/PianTouYinXiao.html',
-    // 'http://sc.chinaz.com/yinxiao/PianTouYinXiao_2.html',
-    // 'http://sc.chinaz.com/yinxiao/PianTouYinXiao_3.html',
-    // 'http://sc.chinaz.com/yinxiao/PianTouYinXiao_4.html',
-    // 'http://sc.chinaz.com/yinxiao/PianTouYinXiao_5.html',
-    // 'http://sc.chinaz.com/yinxiao/PianTouYinXiao_6.html',
+    'http://sc.chinaz.com/yinxiao/PianTouYinXiao_2.html',
+    'http://sc.chinaz.com/yinxiao/PianTouYinXiao_3.html',
+    'http://sc.chinaz.com/yinxiao/PianTouYinXiao_4.html',
+    'http://sc.chinaz.com/yinxiao/PianTouYinXiao_5.html',
+    'http://sc.chinaz.com/yinxiao/PianTouYinXiao_6.html',
 ];
 
 let targetMusicUrls = [];
@@ -29,11 +29,19 @@ function* getPageUrl(inUrl) {
 
 co(function* () {
     let urls=[];
-    yield pageUrls.forEach(function*(url){
-        urls= urls.concat(yield getPageUrl(url));
-    });
+    let page1=yield getPageUrl(pageUrls[0]);
+    let page2=yield getPageUrl(pageUrls[1]);
+    let page3=yield getPageUrl(pageUrls[2]);
+    let page4=yield getPageUrl(pageUrls[3]);
+    let page5=yield getPageUrl(pageUrls[4]);
+    let page6=yield getPageUrl(pageUrls[5]);
 
-    console.log('xx', urls.length)
+    console.log('xx1', page1.length);
+    console.log('xx2', page2.length);
+    console.log('xx3', page3.length);
+    console.log('xx4', page4.length);
+    console.log('xx5', page5.length);
+    console.log('xx6', page6.length);
 })
 
 
