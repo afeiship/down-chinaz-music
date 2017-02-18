@@ -28,8 +28,7 @@ function* getPageUrl(inUrl) {
 }
 
 co(function* () {
-    let urls = yield getPageUrl(pageUrls);
-
+    let urls=[];
     yield pageUrls.forEach(function*(url){
         urls= urls.concat(yield getPageUrl(url));
     });
