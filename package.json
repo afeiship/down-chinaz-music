@@ -21,6 +21,7 @@
   "homepage": "https://github.com/afeiship/down-chinaz-music#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
+    "co": "^4.6.0",
     "superagent": "^3.4.4"
   }
 }
