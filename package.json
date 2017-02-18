@@ -1,0 +1,26 @@
+{
+  "name": "down-chinaz-music",
+  "version": "1.0.0",
+  "description": "Down chinaz music.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/down-chinaz-music.git"
+  },
+  "keywords": [
+    "chinz"
+  ],
+  "author": "afei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/down-chinaz-music/issues"
+  },
+  "homepage": "https://github.com/afeiship/down-chinaz-music#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "superagent": "^3.4.4"
+  }
+}
